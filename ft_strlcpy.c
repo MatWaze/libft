@@ -1,4 +1,4 @@
-int        ft_strlcpy(char *dest, char *src, unsigned int n)
+int	ft_strlcpy(char *dest, char *src, unsigned int n)
 {
 	int 	i;
 	i = 0;

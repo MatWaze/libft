@@ -1,4 +1,4 @@
-#include "ft_libft.h"
+#include "libft.h"
 
 int     ft_strlen1(char *str)
 {
@@ -15,6 +15,7 @@ int     ft_atoi(char *str)
 { 
         int     number;
         int     i;
+        
         number = 0;
         i = 0;
         while (str[i])

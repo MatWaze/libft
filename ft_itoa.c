@@ -1,4 +1,4 @@
-#include "ft_libft.h"
+#include "libft.h"
 
 int     num_size(int num, int count)
 {
