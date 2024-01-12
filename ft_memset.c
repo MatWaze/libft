@@ -1,13 +1,25 @@
-void    *ft_memset(void *s, int c, int n)
-{
-        char    *char_ptr;
-        int     i;
-        i = 0;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/11 14:50:44 by matevos           #+#    #+#             */
+/*   Updated: 2024/01/11 14:51:55 by matevos          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-        char_ptr = (char *) s;
-        while (i < n)
-        {
-                char_ptr[i] = c;
-        }
-        return (s);
+void	*ft_memset(void *s, int c, int n)
+{
+	char	*char_ptr;
+	int		i;
+
+	i = 0;
+	char_ptr = (char *) s;
+	while (i < n)
+	{
+		char_ptr[i] = c;
+	}
+	return (s);
 }

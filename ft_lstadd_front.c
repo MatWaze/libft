@@ -1,17 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/11 13:50:04 by matevos           #+#    #+#             */
+/*   Updated: 2024/01/11 14:21:51 by matevos          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void    ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-        if (!(*lst)) // If the lst doesn't point anywhere, then make it point to new 
-        {
-                *lst = new;
-                return ;
-        }
-        else // If the lst does point to some node, then make the new node point to where lst is pointing to
-        {    // and make lst point to new 
-                new->next = *lst;
-                *lst = new;
-        }
+	if (!(*lst))
+	{
+		*lst = new;
+		return ;
+	}
+	else
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }
 /*
 void    print_list(t_list *begin_list)

@@ -1,16 +1,27 @@
-void    *ft_memchr(const void *s, int c, int n)
-{
-        char    *str;
-        int     i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/11 14:44:19 by matevos           #+#    #+#             */
+/*   Updated: 2024/01/12 19:49:59 by matevos          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-        str = (char *) s;
-        i = 0;
-        while (str[i])
-        {
-                if (str[i] == c)
-                        return (&str[i]);
-                i++;
-        }
-        
-        return (0);
+void	*ft_memchr(const void *s, int c, int n)
+{
+	char	*str;
+	int		i;
+
+	str = (char *) s;
+	i = 0;
+	while (i < n)
+	{
+		if (str[i] == c)
+			return (&str[i]);
+		i++;
+	}
+	return (0);
 }

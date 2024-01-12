@@ -1,23 +1,27 @@
-int     ft_strlen1(char *str)
-{
-        int     i;
-        i = 0;
-        while (str[i])
-        {
-                i++;
-        }
-        return (i);
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/12 19:21:48 by matevos           #+#    #+#             */
+/*   Updated: 2024/01/12 19:28:05 by matevos          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char    *ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
-        int     i;
-        i = ft_strlen1(s) - 1;
-        while (i >= 0)
-        {
-                if (s[i] == c)
-                        return (&s[i]);
-                i--;
-        }
-        return (0);
+	int	i;
+
+	i = ft_strlen(s) - 1;
+	while (i >= 0)
+	{
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i--;
+	}
+	return (0);
 }

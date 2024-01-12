@@ -1,39 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/11 13:19:51 by matevos           #+#    #+#             */
+/*   Updated: 2024/01/12 21:54:15 by matevos          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int     ft_strlen1(char *str)
+int	ft_atoi(const char *str)
 {
-        int     i;
-        i = 0;
-        while (str[i])
-        {
-                i++;
-        }
-        return (i);
-}
+	int	number;
+	int	i;
+	int	minus;
 
-int     ft_atoi(char *str)
-{ 
-        int     number;
-        int     i;
-        
-        number = 0;
-        i = 0;
-        while (str[i])
-        {
-                if (str[i] >= '0' && str[i] <= '9')
-                {
-                        number = number * 10 + str[i] - '0';
-                }
-                i++;
-        }
-        if (str[0] == '-')
-        {
-                number *= -1;
-        }
-        return (number);
+	number = 0;
+	i = 0;
+	minus = 1;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		++i;
+	if (str[i] == '-' || str[i] == '+')
+		if (str[i++] == '-')
+			minus = -1;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		number = number * 10 + str[i] - '0';
+		i++;
+	}
+	return (number * minus);
 }
+/*
+#include <stdio.h>
 
-int     main(void)
+int	main()
 {
-        printf("%i", ft_atoi("-42") + ft_atoi("36"));
+	printf("%i", ft_atoi("1"));
 }
+*/
