@@ -6,17 +6,17 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:37:35 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/11 13:38:13 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/13 14:56:43 by matevos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
-	if (c >= '0' && c <= '9')
+	if (c >= 48 && c <= 57)
 		return (1);
-	else if (c >= 'a' && c <= 'z')
+	else if (c >= 65 && c <= 90)
 		return (1);
-	else if (c >= 'A' && c <= 'Z')
+	else if (c >= 97 && c <= 122)
 		return (1);
 	return (0);
 }

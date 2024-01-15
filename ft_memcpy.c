@@ -6,15 +6,17 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:47:08 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/11 14:48:24 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/13 14:59:32 by matevos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, int n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*s;
 	char	*d;
-	int		i;
+	size_t	i;
 
 	s = (char *) src;
 	d = (char *) dest;

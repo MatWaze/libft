@@ -6,56 +6,95 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:42:10 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/12 19:48:17 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/13 16:46:09 by matevos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	num_size(int num, int count)
+#include <stdlib.h>
+
+unsigned int	num_size(long long num)
 {
-	while (num >= 1)
+	unsigned int	size;
+
+	size = 0;
+	if (num == 0)
+		return (1);
+	while (num != 0)
 	{
-		count++;
-		num /= 10;
+		++size;
+		num = num / 10;
 	}
-	return (count);
+	return (size);
 }
 
-char	*get_num(int n, char *str, int count)
+void	ft_strrev(char *str, unsigned int index, int i)
 {
-	str = (char *) malloc(count + 1);
-	str[count--] = '\0';
-	if (n == 0)
+	char	temp;
+	int		first;
+	int		last;	
+
+	first = index;
+	last = i - 1;
+	while (first < last)
+	{
+		temp = str[first];
+		str[first] = str[last];
+		str[last] = temp;
+		++first;
+		--last;
+	}
+}
+
+void	get_num(char *str, unsigned int index, long int num)
+{
+	int	i;
+
+	i = index;
+	if (num == 0)
+	{
 		str[0] = '0';
-	else if (n < 0)
-	{
-		str[0] = '-';
-		n *= -1;
+		++i;
 	}
-	while (n >= 1)
+	else
 	{
-		str[count--] = (n % 10) + '0';
-		n /= 10;
+		while (num != 0)
+		{
+			str[i] = (num % 10) + '0';
+			num = num / 10;
+			++i;
+		}
 	}
-	return (str);
+	str[i] = '\0';
+	ft_strrev(str, index, i);
 }
 
 char	*ft_itoa(int n)
 {
-	int		n2;
-	int		count;
-	char	*str;
+	unsigned int	index;
+	unsigned int	count;
+	long long		n2;
+	char			*str;
+	int				minus;
 
+	n2 = n;
+	count = num_size(n2);
+	index = 0;
 	str = 0;
-	count = 0;
-	if (n <= 0)
-		count++;
+	minus = 1;
 	if (n < 0)
-		n2 = -n;
-	else
-		n2 = n;
-	count = num_size(n2, count);
-	str = get_num(n, str, count);
+	{
+		count++;
+		index = 1;
+		minus = -1;
+		n2 = -n2;
+	}
+	str = (char *) malloc(count + 1);
+	if (!str)
+		return (0);
+	if (minus == -1)
+		str[0] = '-';
+	get_num(str, index, n2);
 	return (str);
 }
