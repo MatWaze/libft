@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:47:08 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/13 14:59:32 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/17 12:03:28 by matevos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	while (i < n)
 	{
 		d[i] = s[i];
+		i++;
 	}
 	return (dest);
 }

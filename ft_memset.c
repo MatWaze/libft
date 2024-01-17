@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:50:44 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/13 17:01:57 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/17 12:02:21 by matevos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,15 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	c2;
 	size_t			i;
-	char			*char_ptr;
+	char			*ptr;
 
 	i = 0;
-	char_ptr = (char *) b;
+	ptr = (char *) b;
 	c2 = (unsigned char) c;
 	while (i < len)
 	{
-		char_ptr[i] = c2;
+		ptr[i] = c2;
+		i++;
 	}
 	return (b);
 }

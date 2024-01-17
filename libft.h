@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 19:28:42 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/13 18:10:05 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/17 12:31:20 by matevos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
