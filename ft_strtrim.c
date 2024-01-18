@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 15:34:59 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/17 13:46:02 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/18 14:48:39 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	is_set(char c, const char *set)
 	return (0);
 }
 
-int	ft_strlen1(const char *str)
+int	ft_strlen2(const char *str)
 {
 	int	i;
 
@@ -46,7 +46,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	char	*new_str;
 
 	i = 0;
-	j = ft_strlen1(s1) - 1;
+	j = ft_strlen2(s1) - 1;
 	k = 0;
 	while (is_set(s1[i], set) == 1 && i <= j)
 	{
