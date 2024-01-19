@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:44:19 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/13 17:12:13 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/18 15:20:57 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	c2;
-	size_t			i;
+	char	c2;
+	unsigned int	i;
 	char			*str;
 
 	c2 = (unsigned char) c;

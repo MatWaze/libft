@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:56:33 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/11 14:57:01 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/19 14:21:20 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	while (s[i])
+	if (fd >= 0 && fd <= 3)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		while (s[i])
+		{
+			write(fd, &s[i], 1);
+			i++;
+		}
 	}
 }

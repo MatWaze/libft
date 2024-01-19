@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:57:46 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/12 19:56:41 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/18 16:27:04 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ char	**ft_split(char const *s, char delim)
 	int		word;
 
 	arr = (char **) malloc((word_count(s, delim) + 1) * sizeof(char *));
+	if (!arr)
+		return (0);
 	j = 0;
 	i = 0;
 	word = 0;
@@ -83,6 +85,8 @@ char	**ft_split(char const *s, char delim)
 		{
 			word = 1;
 			arr[j] = (char *) malloc(sizeof(char) * (len(&s[i], delim) + 1));
+			if (!arr[j])
+				return (0);
 			arr[j] = ft_strncpy(arr[j], &s[i], len(&s[i], delim));
 			j++;
 		}

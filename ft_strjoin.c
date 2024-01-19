@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 15:19:49 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/12 20:02:07 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/18 16:25:34 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	len = ft_strlen(s1) + ft_strlen(s2);
 	str = (char *) malloc(len + 1);
+	if (!str)
+		return (0);
 	i = 0;
 	j = 0;
 	while (s1[i])

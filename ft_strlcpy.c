@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 15:27:12 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/12 22:05:50 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/19 14:08:58 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 
 	i = 0;
 	if (size == 0)
-	{
 		return (ft_strlen(src));
-	}
 	while (i < size - 1 && src[i])
 	{
 		dest[i] = src[i];
