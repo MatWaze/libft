@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mamazari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 13:42:10 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/22 15:30:41 by mamazari         ###   ########.fr       */
+/*   Created: 2024/01/22 16:49:43 by mamazari          #+#    #+#             */
+/*   Updated: 2024/01/22 16:49:45 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <stdlib.h>
 
 static unsigned int	num_size(long long num)
 {

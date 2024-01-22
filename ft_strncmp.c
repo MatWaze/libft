@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mamazari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 15:31:09 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/18 15:25:19 by mamazari         ###   ########.fr       */
+/*   Created: 2024/01/22 16:57:53 by mamazari          #+#    #+#             */
+/*   Updated: 2024/01/22 16:57:55 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int     main(void)
-{
-        char    *s1 = " f";
-        char    *s2 = " k";
-        printf("%i\n", ft_(s1, s2, 2));
-        printf("%i", (s1, s2, 2));
-}
-*/
