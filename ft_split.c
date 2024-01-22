@@ -6,13 +6,13 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:57:46 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/22 14:37:27 by mamazari         ###   ########.fr       */
+/*   Updated: 2024/01/22 15:50:45 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup1(const char *src, int len)
+static char	*strdup1(const char *src, int len)
 {
 	int		i;
 	char	*dup;
@@ -30,14 +30,14 @@ char	*strdup1(const char *src, int len)
 	return (dup);
 }
 
-int	is_whitespace(char c, char delim)
+static int	is_whitespace(char c, char delim)
 {
 	if (c == delim)
 		return (1);
 	return (0);
 }
 
-int	len(char const *str, char delim)
+static int	len(char const *str, char delim)
 {
 	int	i;
 
@@ -47,7 +47,7 @@ int	len(char const *str, char delim)
 	return (i);
 }
 
-int	word_count(char const *str, char delim)
+static int	word_count(char const *str, char delim)
 {
 	int	i;
 	int	word;
@@ -97,16 +97,3 @@ char	**ft_split(char const *s, char delim)
 	arr[j] = NULL;
 	return (arr);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	**tab = ft_split("Hello,world,my,name,is Matevos.", ',');
-	int	i = -1;
-	while (tab[++i] != NULL)
-	{
-		printf("%s\n", tab[i]);
-	}
-}
-*/

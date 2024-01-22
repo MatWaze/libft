@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:19:51 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/12 21:54:15 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/22 15:23:10 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	minus = 1;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
-		++i;
+		i++;
 	if (str[i] == '-' || str[i] == '+')
 		if (str[i++] == '-')
 			minus = -1;
@@ -33,11 +33,3 @@ int	ft_atoi(const char *str)
 	}
 	return (number * minus);
 }
-/*
-#include <stdio.h>
-
-int	main()
-{
-	printf("%i", ft_atoi("1"));
-}
-*/

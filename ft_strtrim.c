@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 15:34:59 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/18 14:48:39 by mamazari         ###   ########.fr       */
+/*   Updated: 2024/01/22 15:53:57 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <stdio.h>
 
-int	is_set(char c, const char *set)
+static int	is_set(char c, const char *set)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ int	is_set(char c, const char *set)
 	return (0);
 }
 
-int	ft_strlen2(const char *str)
+static int	ft_strlen2(const char *str)
 {
 	int	i;
 
@@ -66,11 +66,3 @@ char	*ft_strtrim(const char *s1, const char *set)
 	new_str[k] = '\0';
 	return (new_str);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_strtrim("tripouille   xxx", " x"));
-	//printf("%s\n", ft_strtrim("abcdba", "acb"));
-	//printf("string: %s\n", ft_strtrim("   xxx   xxx  ", "x "));
-}
-*/

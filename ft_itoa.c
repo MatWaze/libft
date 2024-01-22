@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:42:10 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/13 16:46:09 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/22 15:30:41 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <stdlib.h>
 
-unsigned int	num_size(long long num)
+static unsigned int	num_size(long long num)
 {
 	unsigned int	size;
 
@@ -29,7 +29,7 @@ unsigned int	num_size(long long num)
 	return (size);
 }
 
-void	ft_strrev(char *str, unsigned int index, int i)
+static void	ft_strrev(char *str, unsigned int index, int i)
 {
 	char	temp;
 	int		first;
@@ -47,7 +47,7 @@ void	ft_strrev(char *str, unsigned int index, int i)
 	}
 }
 
-void	get_num(char *str, unsigned int index, long int num)
+static void	get_num(char *str, unsigned int index, long int num)
 {
 	int	i;
 

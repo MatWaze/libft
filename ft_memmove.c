@@ -6,13 +6,13 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:48:42 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/22 14:19:14 by mamazari         ###   ########.fr       */
+/*   Updated: 2024/01/22 15:43:51 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	move(char *d, char *s, size_t n)
+static void	move(char *d, char *s, size_t n)
 {
 	unsigned char	c1;
 	size_t			i;

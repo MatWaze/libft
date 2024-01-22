@@ -6,13 +6,11 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:53:44 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/11 14:57:35 by matevos          ###   ########.fr       */
+/*   Updated: 2024/01/22 15:47:03 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putchar_fd(char c, int fd);
 
 void	ft_putnbr_fd(int n, int fd)
 {
