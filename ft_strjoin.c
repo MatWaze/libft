@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 15:19:49 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/18 16:25:34 by mamazari         ###   ########.fr       */
+/*   Updated: 2024/01/22 14:38:53 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	j = 0;
 	while (s1[i])
-	{
-		str[j] = s1[i];
-		i++;
-		j++;
-	}
+		str[j++] = s1[i++];
 	i = 0;
 	while (s2[i])
-	{
-		str[j] = s2[i];
-		i++;
-		j++;
-	}
+		str[j++] = s2[i++];
 	str[j] = '\0';
 	return (str);
 }

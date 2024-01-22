@@ -6,7 +6,7 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 15:22:46 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/19 14:07:52 by mamazari         ###   ########.fr       */
+/*   Updated: 2024/01/22 14:40:34 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	while (dest[i] && i < size)
 		i++;
 	while (i < size - 1 && src[j])
-	{
-		dest[i] = src[j];
-		++i;
-		++j;
-	}
+		dest[i++] = src[j++];
 	if (i < size)
 		dest[i] = '\0';
 	if (size < dest_len)

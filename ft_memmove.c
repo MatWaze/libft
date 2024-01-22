@@ -6,23 +6,17 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:48:42 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/18 16:51:36 by mamazari         ###   ########.fr       */
+/*   Updated: 2024/01/22 14:19:14 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	move(char *d, char *s, size_t n)
 {
-	size_t	i;
-	char	*s;
-	char	*d;
 	unsigned char	c1;
+	size_t			i;
 
-	if (!src && !dest)
-		return (0);
-	s = (char *)src;
-	d = (char *)dest;
 	i = 0;
 	if (d > s)
 	{
@@ -41,5 +35,17 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			i++;
 		}
 	}
+}
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	char			*s;
+	char			*d;
+
+	if (!src && !dest)
+		return (0);
+	s = (char *)src;
+	d = (char *)dest;
+	move(d, s, n);
 	return (dest);
 }

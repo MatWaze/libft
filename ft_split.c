@@ -6,24 +6,28 @@
 /*   By: matevos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:57:46 by matevos           #+#    #+#             */
-/*   Updated: 2024/01/18 16:27:04 by mamazari         ###   ########.fr       */
+/*   Updated: 2024/01/22 14:37:27 by mamazari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, char const *src, unsigned int n)
+char	*strdup1(const char *src, int len)
 {
-	unsigned int	i;
+	int		i;
+	char	*dup;
 
 	i = 0;
-	while (i < n && src[i])
+	dup = (char *) malloc(sizeof(char) * (len + 1));
+	if (!dup)
+		return (NULL);
+	while (src[i] && i < len)
 	{
-		dest[i] = src[i];
+		dup[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	dup[i] = '\0';
+	return (dup);
 }
 
 int	is_whitespace(char c, char delim)
@@ -84,15 +88,11 @@ char	**ft_split(char const *s, char delim)
 		if (!is_whitespace(s[i], delim) && word == 0)
 		{
 			word = 1;
-			arr[j] = (char *) malloc(sizeof(char) * (len(&s[i], delim) + 1));
-			if (!arr[j])
-				return (0);
-			arr[j] = ft_strncpy(arr[j], &s[i], len(&s[i], delim));
+			arr[j] = strdup1(&s[i], len(&s[i], delim));
 			j++;
 		}
-		else if (is_whitespace(s[i], delim) && word == 1)
+		else if (is_whitespace(s[i++], delim) && word == 1)
 			word = 0;
-		i++;
 	}
 	arr[j] = NULL;
 	return (arr);
